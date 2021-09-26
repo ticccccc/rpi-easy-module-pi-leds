@@ -50,7 +50,7 @@ $gpio readall
 
 ## 项目功能介绍
 
-点亮 easy module pi的led灯
+点亮 easy module pi的led
 
 ## 如何编译
 

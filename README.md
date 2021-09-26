@@ -58,6 +58,8 @@ $gpio readall
 $# raspberrey pi的命令行环境
 $# 当前目录下执行 没有cmake请自行安装
 $# 依赖wiringPi 使用了国内的github镜像 hub.fastgit.org 如果无法下载请使用 github.com
+$# 编译环境 gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
+$# 使用c++ std=17 
 $cmake -S . -B build
 $cmake --build build
 $bin/led

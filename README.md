@@ -52,7 +52,7 @@ $gpio readall
 
 点亮 easy module pi的led
 
-## 如何编译
+## 如何编译&执行
 
 ```bash
 $# raspberrey pi的命令行环境
@@ -60,4 +60,9 @@ $# 当前目录下执行 没有cmake请自行安装
 $# 依赖wiringPi 使用了国内的github镜像 hub.fastgit.org 如果无法下载请使用 github.com
 $cmake -S . -B build
 $cmake --build build
+$bin/led
 ```
+
+## 最终试验结果
+
+[video](video/leds.mp4)

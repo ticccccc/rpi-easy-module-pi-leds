@@ -33,3 +33,4 @@
 
 # cmake 产出文件
 build
+bin

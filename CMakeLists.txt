@@ -5,6 +5,9 @@ project(led VERSION 0.1.0
 
 set(CMAKE_CXX_STANDARD 17)
 
+# set bin prosition
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 
 # download wiringPi as a lib
@@ -19,8 +22,8 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(WIRINGPI)
-
-message(NOTICE "WiringPi_SOURCE_DIR: ${${WIRINGPI}_SOURCE_DIR}")
+# end wiringPi
 
 target_include_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)
-# end wiringPi
+link_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)
+target_link_libraries(led wiringPi)

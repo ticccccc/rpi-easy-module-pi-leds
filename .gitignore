@@ -43,3 +43,4 @@ bin
 *.gz
 *.pdf
 
+.DS_Store

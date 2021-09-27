@@ -34,3 +34,12 @@
 # cmake 产出文件
 build
 bin
+
+# tex文件
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz
+*.pdf
+

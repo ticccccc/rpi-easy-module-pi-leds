@@ -9,7 +9,11 @@ int main(int, char**) {
     cout << "Raspberry Pi blink\n" << endl;
 
     vector<int> vs(3);
-    vector<int> leds={0, 2, 3, 21};
+    vector<int> leds={  0, // red
+                        2, // yellow
+                        3, // green
+                        21 // blue
+                        };
 
     wiringPiSetup () ;
     for (int i : leds) {

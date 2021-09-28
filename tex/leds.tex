@@ -17,7 +17,7 @@
     %%%%%%%%% raspberry pi 4 circuit schematics start %%%%%%%%%
     \ctikzset{multipoles/dipchip/width=4.5}
     \ctikzset{multipoles/dipchip/pin spacing=0.6}
-    \ctikzset{bipoles/length=1.5cm}
+    % \ctikzset{bipoles/length=1.5cm}
     \draw node[dipchip, num pins=40, hide numbers, no topmark, external pins width=1, fill=cyan!20!white](rpi){\LARGE rpi4};
     \node [right, color=orange] at (rpi.bpin 1) {3.3V};
     \node [above, color=orange] at (rpi.pin 1) {3.3V};
@@ -141,8 +141,6 @@
     \draw (rpi.pin 20) -- (rpi.bpin 20) node[color=olive, above, midway] {39};
     \draw (rpi.pin 21) -- (rpi.bpin 21) node[color=olive, above, midway] {40};
 
-    \draw [opacity=0] (rpi.pin 5) to ++(-2, 0) node(B){};
-    \draw (rpi.pin 1) to ++(-2, 0) node{} to[leD, fill=red] (B.center) to[R, l=R] (rpi.pin 5);
     %%%%%%%%% raspberry pi 4 circuit schematics end %%%%%%%%%
     %%%%%%%%% leds blink %%%%%%%%%
     %%%%%%%%% leds blink start %%%%%%%%%

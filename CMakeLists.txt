@@ -21,7 +21,7 @@ FetchContent_Declare(
   GIT_TAG        7f8fe26e4f775abfced43c07657a353f03ddb2d0
 )
 
-FetchContent_MakeAvailable(WIRINGPI)
+FetchContent_MakeAvailable(${WIRINGPI})
 # end wiringPi
 
 target_include_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)

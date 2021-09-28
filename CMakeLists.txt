@@ -25,5 +25,5 @@ FetchContent_MakeAvailable(${WIRINGPI})
 # end wiringPi
 
 target_include_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)
-link_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)
-target_link_libraries(led wiringPi)
+add_library(wiring OBJECT ${${WIRINGPI}_SOURCE_DIR}/wiringPi/wiringPi.c)
+target_link_libraries(led wiring)

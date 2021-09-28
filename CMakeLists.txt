@@ -24,6 +24,11 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(${WIRINGPI})
 # end wiringPi
 
-target_include_directories(led PRIVATE ${${WIRINGPI}_SOURCE_DIR}/wiringPi)
-add_library(wiring OBJECT ${${WIRINGPI}_SOURCE_DIR}/wiringPi/wiringPi.c)
-target_link_libraries(led wiring)
+add_library(wiring OBJECT "${${WIRINGPI}_SOURCE_DIR}/wiringPi/wiringPi.c")
+
+list(APPEND EXTRA_LIBS wiring)
+list(APPEND EXTRA_INCLUDES "${${WIRINGPI}_SOURCE_DIR}/wiringPi")
+
+target_include_directories(led PUBLIC ${EXTRA_INCLUDES})
+
+target_link_libraries(led PUBLIC ${EXTRA_LIBS})

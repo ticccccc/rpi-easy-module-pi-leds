@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
+link_directories(/usr/local/lib)
+include_directories(/usr/local/include)
 
-find_library(wiringPi)
-target_link_libraries(led SHARE wiringPi)
+target_link_libraries(led wiringPi)
